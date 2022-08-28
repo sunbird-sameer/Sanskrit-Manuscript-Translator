@@ -26,7 +26,7 @@ for image in os.listdir("Images"):
     for item in ocr_output:
         translated = translator.translate(item,src='auto', dest='en')
         file = open("Translated.txt", "a", encoding='utf-8')
-        file.write(str(translated.text))
+        file.write(str(" \n " + translated.text))
         file.close
 
         print(translated.text)
